@@ -2,5 +2,7 @@
 using PDFGenerator.Classes;
 
 Console.WriteLine("Hello, World!");
-PdfGenerator pdf = new PdfGenerator();
-pdf.CriarPrimeiroPDF();
+PdfGeneratorDesign pdfGeneratorDesign = new PdfGeneratorDesign();
+pdfGeneratorDesign.PDFGenerator();
+//PdfGenerator pdf = new PdfGenerator();
+//pdf.CriarPrimeiroPDF();
