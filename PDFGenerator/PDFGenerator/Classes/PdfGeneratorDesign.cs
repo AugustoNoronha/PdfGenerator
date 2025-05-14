@@ -152,17 +152,14 @@ namespace PDFGenerator.Classes
                 #endregion
 
                 #region body
-                // Crie uma nova tabela para conter a tabela principal
-                Table containerTable = new Table(1); // 1 coluna
+                Table containerTable = new Table(1); 
                 containerTable.SetWidth(UnitValue.CreatePercentValue(100));
                 containerTable.SetMarginTop(10);
 
-                // Crie uma célula para conter a tabela principal
                 Cell containerCell = new Cell();
-                containerCell.SetPadding(2); // Defina o padding desejado aqui (5 pontos)
-                containerCell.SetBorder(new SolidBorder(ColorConstants.BLACK, 0.5f)); // Defina a borda preta na célula контейнера
+                containerCell.SetPadding(2);
+                containerCell.SetBorder(new SolidBorder(ColorConstants.BLACK, 0.5f));
 
-                // Crie a tabela principal (tb_f1) como antes
                 Table tb_f1 = new Table(UnitValue.CreatePercentArray(new float[] { 12.82f, 25.64f, 19.23f, 10.26f, 12.82f, 19.23f }));
                 tb_f1.SetWidth(UnitValue.CreatePercentValue(100));
 
@@ -171,55 +168,109 @@ namespace PDFGenerator.Classes
                 tb_f1.AddCell(new Cell().Add(new Paragraph("Data Emissão"))
                     .SetFontSize(10)
                     .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200,200,200),0.5f))
                     .SetBackgroundColor(new DeviceRgb(229, 229, 229)));
 
                 tb_f1.AddCell(new Cell().Add(new Paragraph("31/12/2024"))
                     .SetFontSize(10)
-                    .SetBorder(Border.NO_BORDER));
+                    .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
 
                 tb_f1.AddCell(new Cell().Add(new Paragraph("Data de Vencimento"))
                     .SetFontSize(10)
                     .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
                     .SetBackgroundColor(new DeviceRgb(229, 229, 229)));
 
                 tb_f1.AddCell(new Cell().Add(new Paragraph("31/12/2025"))
                     .SetFontSize(10)
-                    .SetBorder(Border.NO_BORDER));
+                    .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
 
                 tb_f1.AddCell(new Cell().Add(new Paragraph("Fatura Nro:"))
                     .SetFontSize(10)
                     .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
                     .SetBackgroundColor(new DeviceRgb(229, 229, 229)));
 
                 tb_f1.AddCell(new Cell().Add(new Paragraph("A009-007-0996654"))
                     .SetFontSize(10)
-                    .SetBorder(Border.NO_BORDER));
+                    .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
 
                 #endregion
                 #region linha2
                 tb_f1.AddCell(new Cell().Add(new Paragraph("Razão Social"))
                     .SetFontSize(10)
                     .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
                     .SetBackgroundColor(new DeviceRgb(229, 229, 229)));
 
                 tb_f1.AddCell(new Cell(1, 3).Add(new Paragraph("Augusto Noronha Leite SA"))
                     .SetFontSize(10)
-                    .SetBorder(Border.NO_BORDER));
+                    .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
 
                 tb_f1.AddCell(new Cell().Add(new Paragraph("LCA/I.A"))
                     .SetFontSize(10)
                     .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
                     .SetBackgroundColor(new DeviceRgb(229, 229, 229)));
 
                 tb_f1.AddCell(new Cell().Add(new Paragraph("00097878-5"))
                     .SetFontSize(10)
-                    .SetBorder(Border.NO_BORDER));
+                    .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
+                #endregion
+                #region linha3
+                tb_f1.AddCell(new Cell().Add(new Paragraph("Direção"))
+                    .SetFontSize(10)
+                    .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
+                    .SetBackgroundColor(new DeviceRgb(229, 229, 229)));
+
+                tb_f1.AddCell(new Cell(1, 3).Add(new Paragraph("HU BBHGU123 - OPS - GUIANA - 1087 - LOREUS . (8888) BRASIL"))
+                    .SetFontSize(10)
+                    .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
+
+                tb_f1.AddCell(new Cell().Add(new Paragraph("TEl."))
+                    .SetFontSize(10)
+                    .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
+                    .SetBackgroundColor(new DeviceRgb(229, 229, 229)));
+
+                tb_f1.AddCell(new Cell().Add(new Paragraph("13850978680"))
+                    .SetFontSize(10)
+                    .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
+                #endregion
+                #region linha3
+                tb_f1.AddCell(new Cell().Add(new Paragraph("NOTA DE LORENISPS Nº"))
+                    .SetFontSize(10)
+                    .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
+                    .SetBackgroundColor(new DeviceRgb(229, 229, 229)));
+
+                tb_f1.AddCell(new Cell(1, 3).Add(new Paragraph(" "))
+                    .SetFontSize(10)
+                    .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
+
+                tb_f1.AddCell(new Cell().Add(new Paragraph("DATA"))
+                    .SetFontSize(10)
+                    .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
+                    .SetBackgroundColor(new DeviceRgb(229, 229, 229)));
+
+                tb_f1.AddCell(new Cell().Add(new Paragraph(""))
+                    .SetFontSize(10)
+                    .SetBorder(Border.NO_BORDER)
+                    .SetBorderBottom(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
                 #endregion
 
-                // Adicione a tabela principal à célula контейнера
                 containerCell.Add(tb_f1);
 
-                // Adicione a célula контейнера à tabela контейнера
                 containerTable.AddCell(containerCell);
 
                 document.Add(containerTable);
