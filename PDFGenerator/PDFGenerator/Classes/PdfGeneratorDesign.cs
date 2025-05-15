@@ -356,8 +356,75 @@ namespace PDFGenerator.Classes
                 tb_f3_aux.AddCell(CreateCell("TOTAL DE I.PT.U.:9.546,00", 7, TextAlignment.LEFT, bold: true)
                     .SetBorderTop(Border.NO_BORDER)
                     .SetBorderLeft(Border.NO_BORDER));
-                #endregion
                 document.Add(tb_f3_aux);
+
+                Table original_cliente = new Table(UnitValue.CreatePercentArray(new float[] { 50f, 50f }));
+                original_cliente.SetWidth(UnitValue.CreatePercentValue(100));
+                original_cliente.SetBorder(Border.NO_BORDER);
+                original_cliente.AddCell(CreateCell("Autorização como hasdgasdi timdyuiqw de documento 138305875192780", 7, TextAlignment.LEFT, true,false));
+                original_cliente.AddCell(CreateCell("Original Cliente", 8, TextAlignment.RIGHT, true, false));
+
+                document.Add(original_cliente);
+                #endregion
+
+                #region Footer
+                Table footer = new Table(UnitValue.CreatePercentArray(new float[] { 12.82f, 25.64f, 12.82f, 12.82f, 12.82f, 23.08f }));
+                footer.SetWidth(UnitValue.CreatePercentValue(100));
+                footer.SetMarginTop(20);
+                footer.SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f));
+                footer.AddCell(CreateCell("Nro. Factura", 7, TextAlignment.LEFT, bgColor:new DeviceRgb(229,229,229))
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
+                    );
+                footer.AddCell(CreateCell("H005-017-0008965", 7, TextAlignment.LEFT)
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
+                footer.AddCell(CreateCell("Data Datura", 7, TextAlignment.LEFT, bgColor: new DeviceRgb(229, 229, 229))
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
+                footer.AddCell(CreateCell("25/11/2022", 7, TextAlignment.LEFT)
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
+                footer.AddCell(CreateCell("Recebido por", 7, TextAlignment.CENTER, true, colSpan: 2, bgColor: new DeviceRgb(229, 229, 229))
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
+
+                footer.AddCell(CreateCell("Razão Social", 7, TextAlignment.LEFT, bgColor: new DeviceRgb(229, 229, 229))
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
+                    .SetBorderBottom(Border.NO_BORDER)
+                    .SetBorderTop(Border.NO_BORDER));
+                footer.AddCell(CreateCell("Douglas Jin Costa", 7, TextAlignment.LEFT, colSpan:3)
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
+                    .SetBorderBottom(Border.NO_BORDER)
+                    .SetBorderTop(Border.NO_BORDER));
+                footer.AddCell(CreateCell("Firma", 7, TextAlignment.LEFT)
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
+                footer.AddCell(CreateCell("", 7, TextAlignment.LEFT)
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
+
+                footer.AddCell(CreateCell("", 7, TextAlignment.LEFT, bgColor: new DeviceRgb(229, 229, 229))
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
+                    .SetBorderBottom(Border.NO_BORDER)
+                    .SetBorderTop(Border.NO_BORDER));
+                footer.AddCell(CreateCell("", 7, TextAlignment.LEFT, colSpan: 3)
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
+                    .SetBorderBottom(Border.NO_BORDER)
+                    .SetBorderTop(Border.NO_BORDER));
+                footer.AddCell(CreateCell("Aclsaoijd", 7, TextAlignment.LEFT)
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
+                footer.AddCell(CreateCell("", 7, TextAlignment.LEFT)
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
+
+                footer.AddCell(CreateCell("", 7, TextAlignment.LEFT, bgColor: new DeviceRgb(229, 229, 229))
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
+                    .SetBorderBottom(Border.NO_BORDER)
+                    .SetBorderTop(Border.NO_BORDER));
+                footer.AddCell(CreateCell("", 7, TextAlignment.LEFT, colSpan: 3)
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f))
+                    .SetBorderBottom(Border.NO_BORDER)
+                    .SetBorderTop(Border.NO_BORDER));
+                footer.AddCell(CreateCell("Data", 7, TextAlignment.LEFT)
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
+                footer.AddCell(CreateCell("", 7, TextAlignment.LEFT)
+                    .SetBorder(new SolidBorder(new DeviceRgb(200, 200, 200), 0.5f)));
+                document.Add(footer);
+
+                #endregion
 
 
                 document.Close();
